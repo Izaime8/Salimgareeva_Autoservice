@@ -68,56 +68,56 @@
       <DependentUpon>AddEditPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Client.cs">
-      <DependentUpon>SalimgareevaModel.tt</DependentUpon>
+      <DependentUpon>Salimgareeva_Model.tt</DependentUpon>
     </Compile>
     <Compile Include="ClientService.cs">
-      <DependentUpon>SalimgareevaModel.tt</DependentUpon>
+      <DependentUpon>Salimgareeva_Model.tt</DependentUpon>
     </Compile>
     <Compile Include="DocumentByService.cs">
-      <DependentUpon>SalimgareevaModel.tt</DependentUpon>
+      <DependentUpon>Salimgareeva_Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Gender.cs">
-      <DependentUpon>SalimgareevaModel.tt</DependentUpon>
+      <DependentUpon>Salimgareeva_Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Manager.cs" />
     <Compile Include="Manufacturer.cs">
-      <DependentUpon>SalimgareevaModel.tt</DependentUpon>
+      <DependentUpon>Salimgareeva_Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Product.cs">
-      <DependentUpon>SalimgareevaModel.tt</DependentUpon>
+      <DependentUpon>Salimgareeva_Model.tt</DependentUpon>
     </Compile>
     <Compile Include="ProductPhoto.cs">
-      <DependentUpon>SalimgareevaModel.tt</DependentUpon>
+      <DependentUpon>Salimgareeva_Model.tt</DependentUpon>
     </Compile>
     <Compile Include="ProductSale.cs">
-      <DependentUpon>SalimgareevaModel.tt</DependentUpon>
+      <DependentUpon>Salimgareeva_Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="SalimgareevaModel.Context.cs">
+    <Compile Include="Salimgareeva_Model.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>SalimgareevaModel.Context.tt</DependentUpon>
+      <DependentUpon>Salimgareeva_Model.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="SalimgareevaModel.cs">
+    <Compile Include="Salimgareeva_Model.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>SalimgareevaModel.tt</DependentUpon>
+      <DependentUpon>Salimgareeva_Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="SalimgareevaModel.Designer.cs">
+    <Compile Include="Salimgareeva_Model.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>SalimgareevaModel.edmx</DependentUpon>
+      <DependentUpon>Salimgareeva_Model.edmx</DependentUpon>
     </Compile>
     <Compile Include="Service.cs">
-      <DependentUpon>SalimgareevaModel.tt</DependentUpon>
+      <DependentUpon>Salimgareeva_Model.tt</DependentUpon>
     </Compile>
     <Compile Include="ServicePage.xaml.cs">
       <DependentUpon>ServicePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ServicePhoto.cs">
-      <DependentUpon>SalimgareevaModel.tt</DependentUpon>
+      <DependentUpon>Salimgareeva_Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Tag.cs">
-      <DependentUpon>SalimgareevaModel.tt</DependentUpon>
+      <DependentUpon>Salimgareeva_Model.tt</DependentUpon>
     </Compile>
     <Page Include="AddEditPage.xaml">
       <SubType>Designer</SubType>
@@ -163,12 +163,12 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <EntityDeploy Include="SalimgareevaModel.edmx">
+    <EntityDeploy Include="Salimgareeva_Model.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>SalimgareevaModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>Salimgareeva_Model.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="SalimgareevaModel.edmx.diagram">
-      <DependentUpon>SalimgareevaModel.edmx</DependentUpon>
+    <None Include="Salimgareeva_Model.edmx.diagram">
+      <DependentUpon>Salimgareeva_Model.edmx</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -179,19 +179,41 @@
     <Resource Include="img\service_logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="SalimgareevaModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>SalimgareevaModel.Context.cs</LastGenOutput>
-      <DependentUpon>SalimgareevaModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="SalimgareevaModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>SalimgareevaModel.edmx</DependentUpon>
-      <LastGenOutput>SalimgareevaModel.cs</LastGenOutput>
-    </Content>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Resource Include="img\picture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Услуги автосервиса\diz.jpg" />
+    <Resource Include="Услуги автосервиса\rulevoe-upravlenie-avtomobilya.jpg" />
+    <Resource Include="Услуги автосервиса\transmission.jpg" />
+    <Resource Include="Услуги автосервиса\АКПП.jpg" />
+    <Resource Include="Услуги автосервиса\Вариатор.jpg" />
+    <Resource Include="Услуги автосервиса\Выхлопная система.jpg" />
+    <Resource Include="Услуги автосервиса\ГУР.png" />
+    <Resource Include="Услуги автосервиса\Двигатель.png" />
+    <Resource Include="Услуги автосервиса\Дополнительные услуги.png" />
+    <Resource Include="Услуги автосервиса\Кондиционер.jpg" />
+    <Resource Include="Услуги автосервиса\КПП.png" />
+    <Resource Include="Услуги автосервиса\Подвеска.png" />
+    <Resource Include="Услуги автосервиса\Сцепление.jpg" />
+    <Resource Include="Услуги автосервиса\Техническое обслуживание.png" />
+    <Resource Include="Услуги автосервиса\Топливная система.png" />
+    <Resource Include="Услуги автосервиса\Шиномонтаж.jpg" />
+    <Resource Include="Услуги автосервиса\Электрика.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Salimgareeva_Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Salimgareeva_Model.edmx</DependentUpon>
+      <LastGenOutput>Salimgareeva_Model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Salimgareeva_Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Salimgareeva_Model.edmx</DependentUpon>
+      <LastGenOutput>Salimgareeva_Model.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

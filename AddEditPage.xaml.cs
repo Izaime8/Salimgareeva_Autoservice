@@ -30,6 +30,8 @@ namespace Salimgareeva_Autoservice
                 _currentService = SelectedService;
 
             DataContext = _currentService;
+            /////////////////////////////////////////////////////////////////////
+            _currentService.DiscountInput = Convert.ToInt32(_currentService.Discount * 100);
         }
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
@@ -39,8 +41,12 @@ namespace Salimgareeva_Autoservice
                 errors.AppendLine("Укажите название услуги");
             if (_currentService.Cost <= 0) //стоимость меньше нуля?
                 errors.AppendLine("Укажите стоимость услуги");
-            if (_currentService.Discount < 0 || _currentService.Discount > 1 || !_currentService.Discount.HasValue )
+
+
+            if (_currentService.DiscountInput < 0 || _currentService.DiscountInput > 100)
                 errors.AppendLine("Скидка введена некорректно");
+
+
             if (string.IsNullOrWhiteSpace(_currentService.Duration))
                 errors.AppendLine("Укажите длительность усуги");
 
@@ -49,6 +55,8 @@ namespace Salimgareeva_Autoservice
                 MessageBox.Show(errors.ToString());
                 return;
             }
+            ////////////////////////////////
+            _currentService.Discount = _currentService.DiscountInput / 100.0;
             if (_currentService.ID == 0)
                 Salimgareeva_AutoserviceEntities.GetContext().Service.Add(_currentService);
             try

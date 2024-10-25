@@ -15,16 +15,16 @@ namespace Salimgareeva_Autoservice
     
     public partial class Salimgareeva_AutoserviceEntities : DbContext
     {
-
         private static Salimgareeva_AutoserviceEntities _context;
 
         public static Salimgareeva_AutoserviceEntities GetContext()
         {
-            if (_context == null)
+            if( _context == null )
                 _context = new Salimgareeva_AutoserviceEntities();
 
             return _context;
         }
+
         public Salimgareeva_AutoserviceEntities()
             : base("name=Salimgareeva_AutoserviceEntities")
         {
