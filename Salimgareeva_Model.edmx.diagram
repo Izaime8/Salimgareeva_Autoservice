@@ -4,23 +4,23 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="cdf05bc0ad9f41b1b9858d34dde27862" Name="Diagram1">
+      <Diagram DiagramId="ce349976714642c8877ef43e6aa5eeac" Name="Diagram1">
         <EntityTypeShape EntityType="Salimgareeva_AutoserviceModel.Client" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="Salimgareeva_AutoserviceModel.ClientService" Width="1.5" PointX="3" PointY="9.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="Salimgareeva_AutoserviceModel.DocumentByService" Width="1.5" PointX="5.25" PointY="10" IsExpanded="true" />
-        <EntityTypeShape EntityType="Salimgareeva_AutoserviceModel.Gender" Width="1.5" PointX="1.5" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Salimgareeva_AutoserviceModel.ClientService" Width="1.5" PointX="3" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Salimgareeva_AutoserviceModel.DocumentByService" Width="1.5" PointX="5.25" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Salimgareeva_AutoserviceModel.Gender" Width="1.5" PointX="1.5" PointY="12.375" IsExpanded="true" />
         <EntityTypeShape EntityType="Salimgareeva_AutoserviceModel.Manufacturer" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
         <EntityTypeShape EntityType="Salimgareeva_AutoserviceModel.Product" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
         <EntityTypeShape EntityType="Salimgareeva_AutoserviceModel.ProductPhoto" Width="1.5" PointX="5.25" PointY="4" IsExpanded="true" />
         <EntityTypeShape EntityType="Salimgareeva_AutoserviceModel.ProductSale" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Salimgareeva_AutoserviceModel.Service" Width="1.5" PointX="0.75" PointY="16.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Salimgareeva_AutoserviceModel.ServicePhoto" Width="1.5" PointX="3" PointY="19.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="Salimgareeva_AutoserviceModel.Tag" Width="1.5" PointX="3" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Salimgareeva_AutoserviceModel.Service" Width="1.5" PointX="5.25" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Salimgareeva_AutoserviceModel.ServicePhoto" Width="1.5" PointX="7.5" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Salimgareeva_AutoserviceModel.Tag" Width="1.5" PointX="3" PointY="15.25" IsExpanded="true" />
         <AssociationConnector Association="Salimgareeva_AutoserviceModel.FK_Client_Gender" ManuallyRouted="false" />
         <AssociationConnector Association="Salimgareeva_AutoserviceModel.FK_ClientService_Client" ManuallyRouted="false" />
-        <AssociationConnector Association="Salimgareeva_AutoserviceModel.FK_ClientService_Service" ManuallyRouted="false" />
         <AssociationConnector Association="Salimgareeva_AutoserviceModel.FK_DocumentByService_ClientService" ManuallyRouted="false" />
         <AssociationConnector Association="Salimgareeva_AutoserviceModel.FK_ProductSale_ClientService" ManuallyRouted="false" />
+        <AssociationConnector Association="Salimgareeva_AutoserviceModel.FK_Service_ClientService" ManuallyRouted="false" />
         <AssociationConnector Association="Salimgareeva_AutoserviceModel.FK_Product_Manufacturer" ManuallyRouted="false" />
         <AssociationConnector Association="Salimgareeva_AutoserviceModel.FK_ProductPhoto_Product" ManuallyRouted="false" />
         <AssociationConnector Association="Salimgareeva_AutoserviceModel.FK_ProductSale_Product" ManuallyRouted="false" />

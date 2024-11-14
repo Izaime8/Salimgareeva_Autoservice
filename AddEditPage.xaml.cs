@@ -30,8 +30,7 @@ namespace Salimgareeva_Autoservice
                 _currentService = SelectedService;
 
             DataContext = _currentService;
-            /////////////////////////////////////////////////////////////////////
-            _currentService.DiscountInput = Convert.ToInt32(_currentService.Discount * 100);
+            //_currentService.DiscountInput = Convert.ToInt32(_currentService.Discount * 100);
         }
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
@@ -42,21 +41,49 @@ namespace Salimgareeva_Autoservice
             if (_currentService.Cost <= 0) //стоимость меньше нуля?
                 errors.AppendLine("Укажите стоимость услуги");
 
-
-            if (_currentService.DiscountInput < 0 || _currentService.DiscountInput > 100)
+            //////////////////////////
+            if (_currentService.DiscountInt < 0 || _currentService.DiscountInt > 100)
                 errors.AppendLine("Скидка введена некорректно");
 
 
-            if (string.IsNullOrWhiteSpace(_currentService.Duration))
+            if (_currentService.Duration == 0) // || _currentService.Duration > ???)
                 errors.AppendLine("Укажите длительность усуги");
+
+            if (_currentService.Duration > 240)
+                errors.AppendLine("Длительность услуги не может быть больше 240 минут");
+            if (_currentService.Duration < 0)
+                errors.AppendLine("Длительность услуги не может быть меньше 0 минут");
+
 
             if (errors.Length > 0)
             {
                 MessageBox.Show(errors.ToString());
                 return;
             }
+
+            var allServises = Salimgareeva_AutoserviceEntities.GetContext().Service.ToList();
+            allServises = allServises.Where(p => p.Title == _currentService.Title).ToList();
+            if (allServises.Count == 0)
+            {
+                if (_currentService.ID == 0)
+                    Salimgareeva_AutoserviceEntities.GetContext().Service.Add(_currentService);
+                try
+                {
+                    Salimgareeva_AutoserviceEntities.GetContext().SaveChanges();
+                    MessageBox.Show("информация сохранена");
+                    Manager.MainFrame.GoBack();
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+            }
+            else
+            {
+                MessageBox.Show("уже существует такая услуга"); 
+            }
             ////////////////////////////////
-            _currentService.Discount = _currentService.DiscountInput / 100.0;
+            //_currentService.Discount = _currentService.DiscountInput / 100.0;
             if (_currentService.ID == 0)
                 Salimgareeva_AutoserviceEntities.GetContext().Service.Add(_currentService);
             try
